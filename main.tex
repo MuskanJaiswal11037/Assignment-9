@@ -1,0 +1,158 @@
+
+\usepackage[utf8]{inputenc}
+\documentclass{beamer}
+\usetheme{CambridgeUS}
+\usepackage{listings}
+\usepackage{blkarray}
+\usepackage{listings}
+\usepackage{subcaption}
+\usepackage{url}
+\usepackage{tikz}
+\usepackage{tkz-euclide} % loads  TikZ and tkz-base
+%\usetkzobj{all}
+\usetikzlibrary{calc,math}
+\usepackage{float}
+\renewcommand{\vec}[1]{\mathbf{#1}}
+\usepackage[export]{adjustbox}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{bm}
+\usetikzlibrary{automata, positioning}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\providecommand{\abs}[1]{\vert#1\vert}
+
+\newcounter{saveenumi}
+\newcommand{\seti}{\setcounter{saveenumi}{\value{enumi}}}
+\newcommand{\conti}{\setcounter{enumi}{\value{saveenumi}}}
+\usepackage{amsmath}
+\setbeamertemplate{caption}[numbered]{}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+
+\title{\typedef{ASSIGNMENT-8}}       
+\author{MUSKAN JAISWAL -cs21btech11037}
+\date{May 2022}
+\loepackage[utf8]{inputenc}
+\documentclass{beamer}
+\usetheme{CambridgeUS}
+\usepackage{listings}
+\usepackage{blkarray}
+\usepackage{listings}
+\usepackage{subcaption}
+\usepackage{url}
+\usepackage{tikz}
+\usepackage{tkz-euclide} % loads  TikZ and tkz-base
+%\usetkzobj{all}
+\usetikzlibrary{calc,math}
+\usepackage{float}
+\renewcommand{\vec}[1]{\mathbf{#1}}
+\usepackage[export]{adjustbox}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{bm}
+\usetikzlibrary{automata, positioning}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\providecommand{\abs}[1]{\vert#1\vert}
+
+\newcounter{saveenumi}
+\newcommand{\seti}{\setcounter{saveenumi}{\value{enumi}}}
+\newcommand{\conti}{\setcounter{enumi}{\value{saveenumi}}}
+\usepackage{amsmath}
+\setbeamertemplate{caption}[numbered]{}
+
+
+\title{\typedef{ASSIGNMENT-9}}       
+\author{MUSKAN JAISWAL -cs21btech11037}
+\date{May 2022}
+\logo{\large \Latex{}}
+\begin{document}
+
+\begin{frame}{Outline}
+  \tableofcontents
+\end{frame}
+\section{Abstract}
+	\begin{frame}{Abstract}
+		\begin{itemize}
+			\item 	This document contains the explanation of question  9.12  of Papoulis Pillai Probability book of chapter sequence of random variables.
+		\end{itemize}
+	\end{frame}
+	
+\maketitle
+
+\section{PROBLEM:}
+\begin{frame}{}
+\begin{block}{}
+Consider a general one-dimensional random walk on the possible states $e_o, e_1, e_2,$ .... 
+Let $S_n$ represent the location of the particle at time n on a straight line such that at each 
+interior state  $e_j$ , the particle either moves to the right to $e_{j+ 1}$ with probability $P_j$, or to 
+the left to $e_{j-1}$ with probability $q_j$ or remains where it is at $e_j$.
+
+\end{block}
+\end{frame}
+\section{EXPLANATION:}
+\begin{frame}{}
+At state $e_0$ it can either stay at the same position with probability $r_0$ or move 
+to the right to $e_1$ with probability $P_1$.
+
+The transition matrix for the given problem is:- \\
+ \myvec{r_0&p_0&0&0&...\\q_1&r_1&p_1&0&...\\0&q_2&r_2&p_2&...\\0&0&q_3&r_3&p_3}\\
+
+Random walk on a line with $ r_0+p_0=1 $ \\
+$q_i+r_i+p_i=1 $ \hspace $ i=1,2,3,$......\\
+Thus, $P_{00}=r_{0}$  \hspace  $p_{01}=p_0$  \hspace \hspace  $p_{0j}=0 , j>1 $ \\
+and for i \ge 1 \\
+
+
+$p_{ij}$=  \hspace \{  $p_i>0 $ \hspace j=i+1\\
+                  $r_i >=0 $\hspace j=i\\
+                  $q_i >0 $ \hspace j=i-1\\
+                  0 \hspace otherwise  \}
+                 
+             \\
+            \end{frame}
+            \begin{frame}
+            The model with $ p_i=p,q_i=1-p,r_i=0 $for i$>1$, and $r_0 $corresponds to the gambler's ruin problem.\\
+            
+            Here, the distribution of distance $d_N$ travelled after a given number of steps. Let $n_1 $ be the number 
+             of steps travelled towards left and total steps be N.\\
+             $d_N=2n_1-N   \\
+             d=a_1 +a_2 +....a_n $\\
+             $<d \ge  < \brak {a_1 +a_2 +a_3 +a_4 +.....a_n}> $\\
+            $ <d\ge   <a_1>+<a_2>+<a_3>+<a_4>....<a_n>\\
+              d \ge 0  $ \hspace \{As, $ \l a_i>=0$ if there is equal probability to move forward or backward and the steps taken are equal in distance.\}\\
+             Average of $D^2 $\\
+             $<d^2\ge <\brak{ a_1+a_2+a_3+.....a_n  }^2> $\\
+            $ <d^2\ge <{a_1}^2>+<{a_2}^2>+<{a_3}^2>+.......<a_n^2> +2 \{<a_1><a_2> +<a_2><a_3>+<a_4><a_5>+.....\} $\\
+            $<d^2 \ge N  $   \hspace  $\{ \sqrt{<a^2>} $  is average positive distance \}  \\
+             $\sqrt{<d^2>}= \sqrt{N}$\\
+             We expect  that after N steps,we are  $\sqrt{N} $ steps away from where we start. \\
+
+            \end{frame}
+\end{document}
